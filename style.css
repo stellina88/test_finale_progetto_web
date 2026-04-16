@@ -1,74 +1,51 @@
-/* Importazione font moderno */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+:root {
+    --primary: #4e73df;
+    --success: #1cc88a;
+    --danger: #e74a3b;
+    --dark-blue: #224abe;
+}
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+    background-color: #f8f9fc;
+    color: #5a5c69;
 }
 
-/* Header personalizzato */
 header {
-    background: linear-gradient(135deg, #4e73df 0%, #224abe 100%) !important;
-    border-bottom: 4px solid #1a3a96;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--dark-blue) 100%);
 }
 
-/* Card ed effetti hover */
 .card {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: none;
     border-radius: 12px;
 }
 
-.card:hover {
-    transform: translateY(-5px); /* Effetto sollevamento  */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
-}
+/* Barre colorate laterali */
+.card-stats-entrata { border-left: 5px solid var(--success); }
+.card-stats-uscita { border-left: 5px solid var(--danger); }
+.card-stats-bilancio { border-left: 5px solid var(--primary); }
 
-/* Stile della Tabella  */
-.table {
-    border-collapse: separate;
-    border-spacing: 0 8px; /* Crea spazio tra le righe */
-}
-
-.table tbody tr {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-    transition: background-color 0.2s;
-}
-
-.table tbody tr:hover {
-    background-color: #f1f4ff; /* Hover sulle righe  */
-}
-
-.table thead th {
-    border: none;
-    text-transform: uppercase;
+.table thead {
+    background-color: #f8f9fc;
+    color: var(--primary);
     font-size: 0.8rem;
-    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-/* Badge personalizzati per categoria  */
+.badge {
+    font-weight: 600;
+    padding: 0.5em 0.8em;
+}
+
+/* Colori Badge */
 .badge-casa { background-color: #fd7e14; }
 .badge-cibo { background-color: #20c997; }
 .badge-trasporti { background-color: #0dcaf0; }
-.badge-tempo-libero { background-color: #6610f2; }
+.badge-lavoro { background-color: #6610f2; }
 .badge-salute { background-color: #dc3545; }
-.badge-altro { background-color: #6c757d; }
+.badge-tempo-libero { background-color: #f6c23e; color: #333; }
+.badge-altro { background-color: #858796; }
 
-/* Bottoni */
-.btn-primary {
-    background-color: #4e73df;
-    border: none;
-    padding: 10px 20px;
-    font-weight: 600;
-}
+.btn-primary { background-color: var(--primary); border: none; }
+.btn-primary:hover { background-color: var(--dark-blue); }
 
-.btn-primary:hover {
-    background-color: #2e59d9;
-}
-
-/* Riepilogo Dinamico */
-#totaleSpese {
-    font-weight: 700;
-    letter-spacing: -1px;
-}
+.rounded-4 { border-radius: 1rem !important; }
